@@ -1,0 +1,15 @@
+<!doctype html>
+<title>CU Money View</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='dataTables.css') }}">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='jquery.dataTables.min.js') }}"></script>
+
+
+<div class=page>
+  <h1>CU Money View</h1>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+  {% block body %}{% endblock %}
+  {% block javascript %}{% endblock %}
+</div>

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+  <table id="salarytable">
+      <thead>
+          <tr>
+              <th>Employee ID</th>
+              <th>Campus</th>
+              <th>Job Family</th>
+              <th>Job Title</th>
+              <th>Job Department</th>
+              <th>Job Full Time %</th>
+              <th>State Funding</th>
+              <th>Non State Funding</th>
+              <th>Total Funding</th>
+          </tr>
+      </thead>
+  </table>
+{% endblock %}
+{% block javascript %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#salarytable').dataTable( {
+            "ajax": "/ajax/entries",
+            "deferRender": true,
+            "columns": [
+                { "data": "employee_id" },
+                { "data": "campus" },
+                { "data": "job_family" },
+                { "data": "job_title" },
+                { "data": "job_department" },
+                { "data": "job_full_time_pcnt" },
+                { "data": "state_funding" },
+                { "data": "non_state_funding" },
+                { "data": "total_funding" }
+            ]
+        } );
+    } );
+</script>
+{% endblock %}
