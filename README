@@ -2,3 +2,8 @@
 
                  a visualizer for CU Faculty/Staff salary data
 
+
+    1. USe these tools to successfully scrape and store salary data in mongodb. [Here](https://github.com/frodopwns/cumoneyscraper)
+    2. From command line run:
+
+    python cumoneyview.py
